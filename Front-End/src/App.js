@@ -1,8 +1,10 @@
+import AllRoutes from "./router/AllRoutes.js";
+
 function App() {
   return (
-    <div className="App">
-      <h1>hello React App</h1>
-    </div>
+    <>
+      <AllRoutes />
+    </>
   );
 }
 
