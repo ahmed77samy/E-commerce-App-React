@@ -1,15 +1,28 @@
-import { Container } from "react-bootstrap"
-import Header from "../components/header/Header"
+import Header from '../components/header/Header';
+import Footer from '../components/footer/Footer';
+import Slider from '../components/slider/Slider';
+import Collections from '../components/collections/Collections';
+import Products from '../components/products/Products';
+import Banner from '../components/banner/Banner1';
+import Clients from "../components/clients/Clients"
+import Blogs from "../components/blogs/Blogs"
+import ProductTrending from "../components/products/ProductTrending"
 
-function Home () {
+function Home() {
   return (
     <div className="page-wrapper">
-      <Header style={{ marginBottom: '50px'}} />
-      <Container>
-        <h1>App from Home</h1>
-      </Container>
+      <Header />
+      <Slider />
+      <Collections />
+      <Products />
+      <Banner />
+      <Clients />
+      <Blogs />
+      <ProductTrending />
+      <Footer />
+      <div style={{ height: '900px' }}> </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

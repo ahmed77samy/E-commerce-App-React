@@ -1,4 +1,4 @@
-import AllRoutes from "./router/AllRoutes.js";
+import AllRoutes from './router/AllRoutes.js';
 
 function App() {
   return (

@@ -1,0 +1,67 @@
+.clients {
+  .sponsers {
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 0;
+    }
+  }
+  .reviews {
+    .reviews__item {
+      display: flex;
+      flex-direction: column;
+      row-gap: 25px;
+      .comment {
+        position: relative;
+        background-color: $px-white;
+        border: 1px solid $px-light;
+        color: $px-gray;
+        padding: 15px 15px;
+        margin: 0;
+        font-size: 15px;
+        font-style: italic;
+        &:after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 20px;
+          transform: rotate(45deg);
+          border-bottom: 1px solid $px-light;
+          border-right: 1px solid $px-light;
+          background-color: $px-white;
+          width: 20px;
+          height: 20px;
+        }
+        &.top {
+          &:after {
+            top: -10px;
+          }
+        }
+      }
+      &.reverse .comment {
+        &:after {
+          border: none;
+          border-top: 1px solid $px-light;
+          border-left: 1px solid $px-light;
+        }
+      }
+      .inteface {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        p {
+          color: $px-gray;
+          font-size: 11px;
+        }
+        img {
+          width: 70px;
+          height: 70px;
+          object-fit: cover;
+          border-radius: 50%;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+}

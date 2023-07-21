@@ -1,9 +1,9 @@
-import { Routes, Route } from "react-router-dom"
-import Home from "../views/home.js"
-import SignUp from "../views/authentication/SignUp.js"
-import Login from "../views/authentication/Login.js"
+import { Routes, Route } from 'react-router-dom';
+import Home from '../views/home.js';
+import SignUp from '../views/authentication/SignUp.js';
+import Login from '../views/authentication/Login.js';
 
-function AllRoutes () {
+function AllRoutes() {
   return (
     <>
       <Routes>
@@ -12,7 +12,7 @@ function AllRoutes () {
         <Route path="/signup" element={<SignUp />} />
       </Routes>
     </>
-  ) 
+  );
 }
 
-export default AllRoutes
+export default AllRoutes;

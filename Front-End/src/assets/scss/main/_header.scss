@@ -1,0 +1,59 @@
+header {
+  .header__tape {
+    font-size: 18px;
+    line-height: 24px;
+    background-color: $px-dark;
+    & p {
+      color: $px-white;
+    }
+  }
+  .header__line-top,
+  .header__line-bottom {
+    border-bottom: 1px solid $px-light;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+    text-transform: uppercase;
+    padding: 10px 0;
+    line-height: 1em;
+    color: $px-dark;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    @include px-hover {
+      color: $px-gray !important;
+    }
+    & svg {
+      font-size: 14px;
+    }
+  }
+  .dropdown-toggle::after {
+    content: none;
+  }
+  .user .account {
+    span.details {
+      display: flex;
+      column-gap: 4px;
+      align-items: center;
+      font-size: 11px;
+      line-height: 11px;
+    }
+    a.dropdown-toggle {
+      padding: 0;
+    }
+    .login {
+      display: flex;
+      column-gap: 8px;
+      align-items: flex-end;
+      font-size: 11px;
+      line-height: 11px;
+      padding: 0;
+      .icon {
+        font-size: 18px;
+        line-height: 18px;
+      }
+    }
+
+  }
+}
