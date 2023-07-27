@@ -1,50 +1,50 @@
 export const sponsers = [
     {
-        photo: "https://placehold.co/150x60/F4F4F4/png"
+        photo: "/img/small/1.png"
     },
     {
-        photo: "https://placehold.co/150x60/F4F4F4/png"
+        photo: "/img/small/2.png"
     },
     {
-        photo: "https://placehold.co/150x60/F4F4F4/png"
+        photo: "/img/small/3.png"
     },
     {
-        photo: "https://placehold.co/150x60/F4F4F4/png"
+        photo: "/img/small/4.png"
     },
     {
-        photo: "https://placehold.co/150x60/F4F4F4/png"
+        photo: "/img/small/5.png"
     },
     {
-        photo: "https://placehold.co/150x60/F4F4F4/png"
+        photo: "/img/small/6.png"
     },
     {
-        photo: "https://placehold.co/150x60/F4F4F4/png"
+        photo: "/img/small/7.png"
     },
     {
-        photo: "https://placehold.co/150x60/F4F4F4/png"
+        photo: "/img/small/8.png"
     },
 ]
 
 export const reviews = [
     {
-        name: "Emma john",
-        photo: "https://placehold.co/70x70/F4F4F4/png",
-        comment: "Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue.",
-        job: "GENERAL MANAGER",
+        name: "إسراء محمد",
+        photo: "/img/small/testimonial1.png",
+        comment: "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة.",
+        job: "مدير عام",
         rating: 5
     },
     {
-        name: "John Doe",
-        photo: "https://placehold.co/70x70/F4F4F4/png",
-        comment: "Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue.",
-        job: "SWIFT inc",
+        name: "أحمد سامي",
+        photo: "/img/small/testimonial2.png",
+        comment: "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة.",
+        job: "مدير تسويقي",
         rating: 3
     },
     {
-        name: "Emma john",
-        photo: "https://placehold.co/70x70/F4F4F4/png",
-        comment: "Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti. Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue.",
-        job: "SFO Perfect inc",
+        name: "هند صبري",
+        photo: "/img/small/testimonial3.png",
+        comment: "هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم نص لوريم إيبسوم ما، عليك أن تتحقق أولاً أن ليس هناك أي كلمات أو عبارات محرجة.",
+        job: "منفذ استراتيجيات",
         rating: 4
     }
 ]

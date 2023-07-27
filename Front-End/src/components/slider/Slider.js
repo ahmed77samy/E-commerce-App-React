@@ -8,12 +8,12 @@ function Slider() {
         <div className="slider__content">
           <Container className="h-100">
             <div className="d-flex flex-column align-items-center justify-content-center h-100 text-center">
-              <p className="c-gray">Limited Time: Online Only!</p>
+              <p className="c-gray">وقت محدود: اونلاين فقط!</p>
               <h1 className="text-uppercase m-0 mb-3">
-                final <br /> CLEARANCE{' '}
+                احصــل الان علـي <br /> الـعـرض الاخيــر
               </h1>
-              <p className="weight-400 c-gray h4">Take 20% Off Sale Must-Haves'</p>
-              <button className="mt-3 btn__classic-raduis">get started</button>
+              <p className="weight-400 c-gray h4">احصــل علـى خصــم 20٪ علـى الـعـروض التي يجـب اقتناؤها</p>
+              <button className="mt-3 btn__classic-raduis">هــيا لنبـــدأ</button>
             </div>
           </Container>
         </div>

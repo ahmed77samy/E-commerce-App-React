@@ -1,71 +1,51 @@
 import { Container } from 'react-bootstrap';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import ProductItem from './ProductItem';
 import { Link } from 'react-router-dom';
+import { product_items } from './items';
 
-SwiperCore.use([Autoplay]);
+SwiperCore.use([Autoplay, Pagination]);
 
 function ProductTrending() {
+  // map for items to given the items
+  const productList = product_items.map((item, index) => {
+    return (
+      <SwiperSlide key={index}>
+        <ProductItem data={item} />
+      </SwiperSlide>
+    );
+  });
+
   return (
     <div className="content main-padding">
       <div className="products tranding">
         <Container>
           <h5 className="text-uppercase text-center mb-4 weight-500">
             <Link to="/" className="link">
-              trending now
+              أفـضـل منتـاجـتنا الان
             </Link>
           </h5>
-          <div className="position-relative px-5">
-            <Swiper
-              slidesPerView={1}
-              spaceBetween={30}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-              }}
-              breakpoints={{
-                576: {
-                  slidesPerView: 2,
-                },
-                992: {
-                  slidesPerView: 4,
-                },
-              }}
-            >
-              <SwiperSlide key="0">
-                <ProductItem />
-              </SwiperSlide>
-              <SwiperSlide key="1">
-                <ProductItem />
-              </SwiperSlide>
-              <SwiperSlide key="2">
-                <ProductItem />
-              </SwiperSlide>
-              <SwiperSlide key="3">
-                <ProductItem />
-              </SwiperSlide>
-              <SwiperSlide key="4">
-                <ProductItem />
-              </SwiperSlide>
-              <SwiperSlide key="5">
-                <ProductItem />
-              </SwiperSlide>
-              <SwiperSlide key="6">
-                <ProductItem />
-              </SwiperSlide>
-              <SwiperSlide key="7">
-                <ProductItem />
-              </SwiperSlide>
-              <SwiperSlide key="8">
-                <ProductItem />
-              </SwiperSlide>
-              <SwiperSlide key="9">
-                <ProductItem />
-              </SwiperSlide>
-            </Swiper>
-          </div>
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              576: {
+                slidesPerView: 2,
+              },
+              992: {
+                slidesPerView: 4,
+              },
+            }}
+          >
+            {productList}
+          </Swiper>
         </Container>
       </div>
     </div>

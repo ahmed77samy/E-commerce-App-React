@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore from 'swiper';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import SwiperControl from '../SwiperControl';
+import { blog_items } from './items';
 
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
@@ -13,13 +14,22 @@ function Blogs() {
   let navigationPrevRef = useRef(0);
   let navigationNextRef = useRef(0);
 
+  // map for items to given the items
+  const blogList = blog_items.map((item, index) => {
+    return (
+      <SwiperSlide key={index}>
+        <BlogItem data={item} />
+      </SwiperSlide>
+    );
+  });
+
   return (
     <div className="content main-padding">
       <div className="blogs">
         <Container>
           <h5 className="text-uppercase text-center mb-4 weight-500">
             <Link to="/" className="link">
-              world shella
+              عالــمــنا
             </Link>
           </h5>
           <div className="position-relative px-5">
@@ -53,18 +63,7 @@ function Blogs() {
                 swiper.navigation.update();
               }}
             >
-              <SwiperSlide key="0">
-                <BlogItem />
-              </SwiperSlide>
-              <SwiperSlide key="1">
-                <BlogItem />
-              </SwiperSlide>
-              <SwiperSlide key="2">
-                <BlogItem />
-              </SwiperSlide>
-              <SwiperSlide key="3">
-                <BlogItem />
-              </SwiperSlide>
+              {blogList}
             </Swiper>
             <SwiperControl prevEl={navigationPrevRef} nextEl={navigationNextRef} />
           </div>

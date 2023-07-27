@@ -3,57 +3,232 @@ header {
     font-size: 18px;
     line-height: 24px;
     background-color: $px-dark;
-    & p {
-      color: $px-white;
-    }
-  }
-  .header__line-top,
-  .header__line-bottom {
-    border-bottom: 1px solid $px-light;
-  }
-  .navbar-light .navbar-nav .nav-link {
-    display: flex;
-    align-items: flex-start;
-    gap: 2px;
-    text-transform: uppercase;
-    padding: 10px 0;
-    line-height: 1em;
-    color: $px-dark;
-    letter-spacing: 0.05em;
-    font-size: 12px;
-    @include px-hover {
-      color: $px-gray !important;
-    }
-    & svg {
+    color: $px-white;
+    @include down-md {
       font-size: 14px;
     }
   }
-  .dropdown-toggle::after {
-    content: none;
-  }
-  .user .account {
-    span.details {
-      display: flex;
-      column-gap: 4px;
-      align-items: center;
-      font-size: 11px;
-      line-height: 11px;
-    }
-    a.dropdown-toggle {
-      padding: 0;
-    }
-    .login {
-      display: flex;
-      column-gap: 8px;
-      align-items: flex-end;
-      font-size: 11px;
-      line-height: 11px;
-      padding: 0;
-      .icon {
-        font-size: 18px;
-        line-height: 18px;
+  nav.navbar {
+    position: static;
+    display: block;
+    .header__line-top {
+      position: relative;
+      border-bottom: 1px solid $px-light;
+      .icon-toggler {
+        border: none;
+        border: 0;
+        font-size: 26px;
+        line-height: 26px;
+        cursor: pointer;
+        margin-left: 20px;
+        @include up-md {
+          display: none;
+        }
+      }
+      .navbar-brand {
+        margin: 0;
       }
     }
+    .header__line-bottom {
+      position: relative;
+      border-bottom: 1px solid $px-light;
+      .nav-item {
+        .dropdown-menu {
+          text-align: inherit;
+          left: unset;
+          right: 0;
+          border: none;
+          border-radius: 0;
+          padding: 15px;
+          background-color: $px-white;
+          box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+          margin: 1px 0 0 0;
+          min-width: 12rem;
+          font-size: unset;
+          .container {
+            display: block;
+          }
+          .dropdown-item {
+            padding: 0 10px;
+            font-size: 14px;
+            line-height: 34px;
+            color: $px-gray;
+            &:hover,
+            &:focus,
+            &:active,
+            &.active,
+            .show {
+              background-color: $px-light;
+              color: $px-dark !important;
+            }
+          }
+        }
+        &.dropdown-fullwidth {
+          position: static;
+          .dropdown-menu {
+            width: 100%;
+            padding: 25px 15px;
+            .dropdown-header {
+              padding: 10px 10px 20px 0;
+            }
+            .collection-item {
+              a {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                &:hover {
+                  img {
+                    transform: scale(1.1, 1.1);
+                  }
+                }
+                img {
+                  transition: 0.6s;
+                }
+              }
+              div {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                white-space: nowrap;
+                padding: 7px;
+                font-size: 12px;
+                text-align: center;
+                background-color: $px-white
+              }
+            }
+          }
+        }
+      }
+      .nav-link {
+        white-space: nowrap;
+        display: flex;
+        align-items: flex-start;
+        gap: 2px;
+        text-transform: uppercase;
+        padding: 20px 0;
+        line-height: 1em;
+        color: $px-dark;
+        font-weight: 600;
+        &::after {
+          content: none;
+        }
+        @include px-hover {
+          color: $px-gray !important;
+        }
+        & svg {
+          font-size: 14px;
+        }
+      }
+    }
+    .user .account {
+      .dropdown-toggle {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .dropdown-menu {
+        left: 0;
+        right: unset;
+      }
+      .login {
+        display: flex;
+        column-gap: 8px;
+        align-items: flex-end;
+        padding: 0;
+        .icon {
+          font-size: 18px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
 
+.navbar-modal {
+  &.modal.fade {
+    transition: all 0.2s linear !important;
+    transform: translateX(300px);
+  }
+  &.modal.fade.show {
+    transform: translateX(0);
+  }
+  .modal-dialog {
+    all: unset;
+    .modal-content {
+      position: fixed;
+      top: 0;
+      right: 0;
+      border: none;
+      border-radius: 0;
+      width: auto;
+      min-width: 300px;
+      height: 100%;
+      .modal-header,
+      .modal-body,
+      .modal-footer {
+        padding: 20px 15px;
+      }
+      .modal-header {
+        border-radius: 0;
+        background-color: $px-dark;
+        border: none;
+      }
+      .modal-body {
+        overflow-y: auto;
+        @include scrollbar;
+        .nav-item {
+          .dropdown-menu {
+            position: static !important;
+            transform: none !important;
+            text-align: right;
+            float: unset;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            background-color: transparent;
+            .dropdown-header {
+              padding: 0 10px;
+              margin-bottom: 10px;
+            }
+            .dropdown-item {
+              padding: 0 10px;
+              font-size: 14px;
+              line-height: 34px;
+              color: $px-gray;
+              &:hover,
+              &:focus,
+              &:active,
+              &.active,
+              .show {
+                background-color: $px-light;
+                color: $px-dark !important;
+              }
+            }
+          }
+        }
+        .nav-link {
+          white-space: nowrap;
+          padding: 10px 0;
+          margin: 10px 0;
+          line-height: 1em;
+          color: $px-dark;
+          font-weight: 600;
+          &::after {
+            content: none;
+          }
+          @include px-hover {
+            color: $px-gray !important;
+          }
+          & svg {
+            font-size: 14px;
+          }
+          &.show {
+            background-color: $px-light-2;
+            padding-right: 10px;
+            color: $px-dark !important;
+          }
+        }
+      }
+    }
   }
 }

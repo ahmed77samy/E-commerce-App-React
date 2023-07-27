@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function SponserItem(props) {
-  let { photo } = props.item;
+function SponserItem({ data: { photo } }) {
   // prevent default
   const handleClick = (e) => e.preventDefault();
   return (

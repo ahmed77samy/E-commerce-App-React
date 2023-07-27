@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom';
 
-function BlogItem() {
+function BlogItem({ data: { photo, title, date, publisher } }) {
   return (
     <div className="blog-item d-flex gap-20">
-      <div className="product__item-image">
-        <img className="img-fluid" src="https://placehold.co/300x200/F4F4F4/png" />
+      <div className="blog__item-image">
+        <img className="img-fluid" src={photo} />
       </div>
-      <div className="product__item-content d-flex flex-column justify-content-start align-items-start">
+      <div className="blog__item-content d-flex flex-column justify-content-start align-items-start">
         <Link to="/" className="h3 text-uppercase">
-          one of the best?
+          {title}
         </Link>
-        <span className="c-gray italic text-small">Octobar 31, 2018</span>
-        <p className="c-gray italic">Posted by ANNIE GREENBERG</p>
+        <span className="c-gray italic text-small">{date}</span>
+        <p className="c-gray italic">نشر بواسطه {publisher}</p>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ function RateStars(props) {
 
   return (
     <div {...props} className="fivestars">
-        <div className="d-inline" data-title-right={`${stars}.00`}>{starList}</div>
+        <div className="d-inline" data-title-left={`${stars}.00`}>{starList}</div>
     </div>
   );
 }

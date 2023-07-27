@@ -15,7 +15,7 @@ function Sponsers() {
   const itemList = sponsers.map((item, index) => {
     return (
       <SwiperSlide key={index}>
-        <SponserItem item={item} />
+        <SponserItem data={item} />
       </SwiperSlide>
     );
   });

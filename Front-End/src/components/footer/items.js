@@ -5,33 +5,32 @@ import { BiSupport } from 'react-icons/bi';
 export const service_items = [
   {
     Icon: LuCar,
-    title: 'fast and free delivery',
-    description: 'free delivery for all orders over $200',
+    title: 'توصيل مجاني وسريع',
+    description: 'توصيل مجاني للطلبات فوق 200 جنية',
   },
   {
     Icon: MdPublishedWithChanges,
-    title: 'money back guarantee',
-    description: 'We return money within 30 days',
+    title: 'ضمان استعادة الاموال',
+    description: 'نعيد الأموال في غضون 30 يومًا',
   },
   {
     Icon: BiSupport,
-    title: '24/7 customer support',
-    description: 'Friendly 24/7 customer support',
+    title: '24/7 خدمة العملاء',
+    description: 'خدمة عملاء 24/7 ودوده',
   },
   {
     Icon: MdPayment,
-    title: 'Secure online payment',
-    description: 'We possess SSL / Secure сertificate',
+    title: 'الدفع الآمن عبر الإنترنت',
+    description: 'لدينا شهادة SSL / آمنة',
   },
   {
     Icon: LuCar,
-    title: 'fast and free delivery',
-    description: 'free delivery for all orders over $200',
+    title: 'توصيل مجاني وسريع',
+    description: 'توصيل مجاني للطلبات فوق 200 جنية',
   },
   {
     Icon: MdPublishedWithChanges,
-    title: 'money back guarantee',
-    description: 'We return money within 30 days',
+    title: 'ضمان استعادة الاموال',
+    description: 'نعيد الأموال في غضون 30 يومًا',
   },
 ];
-

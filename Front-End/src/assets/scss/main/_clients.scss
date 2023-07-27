@@ -14,22 +14,18 @@
       row-gap: 25px;
       .comment {
         position: relative;
-        background-color: $px-white;
-        border: 1px solid $px-light;
+        background-color: $px-light;
         color: $px-gray;
         padding: 15px 15px;
         margin: 0;
-        font-size: 15px;
         font-style: italic;
         &:after {
           content: '';
           position: absolute;
           bottom: -10px;
-          left: 20px;
+          right: 20px;
           transform: rotate(45deg);
-          border-bottom: 1px solid $px-light;
-          border-right: 1px solid $px-light;
-          background-color: $px-white;
+          background-color: $px-light;
           width: 20px;
           height: 20px;
         }

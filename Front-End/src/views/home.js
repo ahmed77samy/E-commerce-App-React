@@ -20,7 +20,6 @@ function Home() {
       <Blogs />
       <ProductTrending />
       <Footer />
-      <div style={{ height: '900px' }}> </div>
     </div>
   );
 }

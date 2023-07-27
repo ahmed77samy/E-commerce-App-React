@@ -242,3 +242,20 @@
 		@content;
 	}
 }
+
+@mixin scrollbar ($width: 10px , $track: $px-light , $thumb: $px-light-2 , $hover: $px-gray) {
+	&::-webkit-scrollbar {
+		width: $width;
+	}
+	&::-webkit-scrollbar-track {
+		background: $track
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: $thumb
+	}
+
+	&::-webkit-scrollbar-thumb:hover {
+		background: $hover
+	}
+}
