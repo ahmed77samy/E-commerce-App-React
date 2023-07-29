@@ -1,0 +1,41 @@
+footer {
+  background-color: $px-black;
+  color: $px-light;
+  .footer__service {
+    background-color: $px-light;
+    color: $px-dark;
+    .service__item {
+      text-align: center;
+      .icon {
+        font-size: 50px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .footer__reference {
+    h2 {
+      margin: 30px 0;
+    }
+    img,
+    .spliter {
+      margin-bottom: 30px;
+    }
+    ul {
+      li {
+        padding: 8px 0;
+      }
+    }
+  }
+
+  .footer__copyright {
+    padding: 25px 0;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
+}

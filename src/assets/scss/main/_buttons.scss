@@ -1,0 +1,197 @@
+.btn__fancy {
+  background-color: transparent;
+  border: 2px solid $px-dark;
+  border-radius: 0;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 400;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 10px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: 0.2s ease;
+  user-select: none;
+  font-size: 13px;
+
+  &:hover {
+    color: $px-white;
+    background: $px-black;
+    &::before {
+      width: 0.9375rem;
+      background: $px-white;
+    }
+    .text {
+      color: $px-white;
+      padding-left: 1.5em;
+    }
+    .top-key {
+      left: -2px;
+      width: 0px;
+    }
+    .bottom-key-1,
+    .bottom-key-2 {
+      right: 0;
+      width: 0;
+    }
+  }
+  &::before {
+    content: ' ';
+    width: 1.5625rem;
+    height: 2px;
+    background: $px-black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+  }
+  .text {
+    display: block;
+    padding-left: 1.1rem;
+    transition: 0.2s ease;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $px-black;
+  }
+  .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: $px-white;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+  }
+  .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: $px-white;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+  .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: $px-white;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+  }
+}
+
+.btn__classic-raduis {
+  padding: 13px 50px;
+  border-radius: 50px;
+  border: 0;
+  background-color: $px-dark;
+  box-shadow: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  color: $px-light;
+  border: 1px solid $px-gray;
+  &:hover {
+    background-color: $px-light;
+    color: $px-dark;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  }
+  &:active {
+    background-color: $px-light;
+    color: $px-dark;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    transform: translateY(4px);
+    transition: 100ms;
+  }
+}
+
+.btn__classic {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 13px 30px;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 13px;
+  border: 1px solid rgba($px-dark, 0.3);
+  background-color: $px-dark;
+  color: $px-white;
+  transition: all 0.2s;
+  &:active {
+    transform: translateY(4px);
+  }
+  &:hover {
+    background-color: $px-white;
+    color: $px-dark;
+  }
+  &[disabled] {
+    cursor: not-allowed !important;
+    filter: contrast(0.5);
+    &:hover {
+      background-color: $px-dark;
+      color: $px-light;
+    }
+    &:active {
+      transform: none;
+    }
+  }
+}
+
+.btn__classic-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 13px 30px;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 14px;
+  border: 1px solid rgba($px-dark, 0.3);
+  color: $px-dark;
+  background-color: transparent;
+  overflow: hidden;
+  transition: all 0.2s;
+  &:hover {
+    background-color: $px-dark;
+    span {
+      margin: 0 10px 0 0;
+      color: $px-light;
+    }
+    .icon {
+      position: absolute;
+      top: 50%;
+      right: 13px;
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+  }
+  &:active {
+    transform: translateY(4px);
+  }
+  span {
+    transition: all 0.2s;
+    margin: 0 0 0 10px;
+    color: $px-dark;
+  }
+  .icon {
+    position: absolute;
+    top: -22px;
+    right: -22px;
+    opacity: 0;
+    color: $px-white;
+  }
+}
