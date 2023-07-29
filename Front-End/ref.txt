@@ -1,8 +1,0 @@
-/* btn__fancy */
-
-<button className="btn__fancy mt-3">
-  <span className="top-key"></span>
-  <span className="text">join now</span>
-  <span className="bottom-key-1"></span>
-  <span className="bottom-key-2"></span>
-</button>
