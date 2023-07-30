@@ -9,8 +9,9 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 
 function Compare() {
   const [open, setOpen] = useState(false);
-  const ToggleCompare = () => setOpen(!open);
+  const ToggleCompare = () => setOpen(prev => !prev);
 
+  // map for compare_items to given the items
   const ProductList = compare_items.map((item, index) => {
     const { photo, title, price } = item;
     return (

@@ -32,7 +32,7 @@ function AsideSizeGroup() {
 
   return (
     <div className="aside-group">
-      <div className="aside-header d-flex justify-content-between align-items-center" onClick={() => setShowSizeBody(!showSizeBody)}>
+      <div className="aside-header d-flex justify-content-between align-items-center" onClick={() => setShowSizeBody(prev => !prev)}>
         <h4 className="m-0">المقاسات</h4>
         {showSizeBody ? <FiChevronUp /> : <FiChevronDown />}
       </div>

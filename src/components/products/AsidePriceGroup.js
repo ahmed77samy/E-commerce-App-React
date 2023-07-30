@@ -39,7 +39,7 @@ function AsidePriceGroup() {
 
   return (
     <div className="aside-group">
-      <div className="aside-header d-flex justify-content-between align-items-center" onClick={() => setShowPriceBody(!showPriceBody)}>
+      <div className="aside-header d-flex justify-content-between align-items-center" onClick={() => setShowPriceBody(prev => !prev)}>
         <h4 className="m-0">السعر</h4>
         {showPriceBody ? <FiChevronUp /> : <FiChevronDown />}
       </div>

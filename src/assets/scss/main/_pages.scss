@@ -31,7 +31,7 @@
 
 .wish-list-content {
   h6 {
-    @include lineclamp(1)
+    @include lineclamp(1);
   }
   .item-price {
     .money {
@@ -43,6 +43,29 @@
       text-decoration: line-through;
       margin-left: 8px;
       font-size: 13px;
+    }
+  }
+}
+
+.contact-content {
+  .btn__classic-icon {
+    .icon {
+      transition: all 0.2s;
+    }
+  }
+}
+
+.not-found-content {
+  .pages-container {
+    margin: auto;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn__classic-icon {
+    .icon {
+      transition: all 0.2s;
     }
   }
 }

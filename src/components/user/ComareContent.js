@@ -5,6 +5,8 @@ import ProductStock from '../products/ProductStock';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 
 function ComareContent() {
+
+  // map for items to given the items
   const ProductList = compare_items.map((item, index) => {
     const { photo, title, price } = item;
     return (

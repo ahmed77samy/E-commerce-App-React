@@ -1,9 +1,8 @@
-import FooterService from "./FooterService"
-import FooterReference from "./FooterReference"
-import FooterCopyRight from "./FooterCopyRight"
+import FooterService from './FooterService';
+import FooterReference from './FooterReference';
+import FooterCopyRight from './FooterCopyRight';
 
 function Footer() {
-
   return (
     <footer className="content">
       <FooterService />

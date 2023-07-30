@@ -18,7 +18,7 @@ function FaqContent() {
           <div className="pages-container">
             <p className="mb-5 c-gray">هذا القسم يناقش اغلب الاسئله الشائعه لدي الزوار لمساعدتك في ايجاد الاجوبه</p>
             <section>
-              <div className="ask mb-3 d-flex align-items-center justify-content-between" onClick={() => setShowF(!showF)}>
+              <div className="ask mb-3 d-flex align-items-center justify-content-between" onClick={() => setShowF(prev => !prev)}>
                 <h6 className="m-0">ما هي مواعيد الشحن والتكاليف؟</h6>
                 <span className={!showF ? 'open' : ''}>+</span>
               </div>
@@ -34,7 +34,7 @@ function FaqContent() {
             </section>
             <div className="my-4 spliter light-2"></div>
             <section>
-              <div className="ask mb-3 d-flex align-items-center justify-content-between" onClick={() => setShowS(!showS)}>
+              <div className="ask mb-3 d-flex align-items-center justify-content-between" onClick={() => setShowS(prev => !prev)}>
                 <h6 className="m-0">ما هي طرق الدفع التي يمكنني استخدامها؟</h6>
                 <span className={!showS ? 'open' : ''}>+</span>
               </div>
@@ -54,7 +54,7 @@ function FaqContent() {
             </section>
             <div className="my-4 spliter light-2"></div>
             <section>
-              <div className="ask mb-3 d-flex align-items-center justify-content-between" onClick={() => setShowTH(!showTH)}>
+              <div className="ask mb-3 d-flex align-items-center justify-content-between" onClick={() => setShowTH(prev => !prev)}>
                 <h6 className="m-0">ما هي سياسة الاستبدال والإرجاع والاسترداد الخاصة بك؟</h6>
                 <span className={!showTH ? 'open' : ''}>+</span>
               </div>

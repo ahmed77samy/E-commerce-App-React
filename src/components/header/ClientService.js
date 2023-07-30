@@ -10,7 +10,7 @@ import { BiTimeFive } from 'react-icons/bi';
 
 function ClientService() {
   const [open, setOpen] = useState(false);
-  const ToggleClientService = (e) => setOpen(!open);
+  const ToggleClientService = (e) => setOpen(prev => !prev);
 
   return (
     <li data-title-down="خدمه الزباين">

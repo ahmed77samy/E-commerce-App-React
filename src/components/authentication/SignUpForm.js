@@ -2,7 +2,7 @@ import USER from '../../core/api/user';
 import { useFormik } from 'formik';
 import { Container, Form } from 'react-bootstrap';
 import * as Yup from 'yup';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { BsGoogle } from 'react-icons/bs';
 
@@ -102,7 +102,7 @@ function SignUpForm() {
             <Form.Group className="form-group d-flex align-items-center justify-content-center mt-3">
               <p className="m-0 c-gray">
                 بالفعل لديك حساب ؟{' '}
-                <Link to="/signin" className="link c-black weight-600">
+                <Link to="/login" className="link c-black weight-600">
                   سجل الان
                 </Link>
               </p>

@@ -27,18 +27,15 @@ function ContactContent() {
               <p className="c-gray">يسعدنا الرد على أي أسئلة لديك أو تزويدك بتقدير. فقط أرسل لنا رسالة في النموذج أدناه مع أي أسئلة قد تكون لديك.</p>
               <Form>
                 <Form.Group controlId="exampleForm.ControlInput1" className="mb-3">
-                  <Form.Label>البريد الالكتروني *</Form.Label>
-                  <Form.Control type="email" placeholder="من فضلك ادخل بريدك الالكتروني" />
+                  <Form.Control type="email" placeholder="من فضلك ادخل بريدك الالكتروني" className='input__classic' />
                 </Form.Group>
 
                 <Form.Group controlId="exampleForm.ControlInput1" className="mb-3">
-                  <Form.Label>الأسم *</Form.Label>
-                  <Form.Control type="email" placeholder="من فضلك ادخل أسمك" />
+                  <Form.Control type="email" placeholder="من فضلك ادخل أسمك" className='input__classic' />
                 </Form.Group>
 
                 <Form.Group controlId="exampleForm.ControlTextarea1">
-                  <Form.Label>الموضوع *</Form.Label>
-                  <Form.Control as="textarea" rows={7} placeholder="من فضلك اترك رسالتك" />
+                  <Form.Control as="textarea" rows={7} placeholder="من فضلك اترك رسالتك" className='input__classic' />
                 </Form.Group>
 
                 <button type='submit' className="btn__classic-icon mt-5">

@@ -18,7 +18,7 @@ import NavbarMobile from './NavbarMobile';
 
 function Header(props) {
   const [mobileMenu, setMobileMenu] = useState(false);
-  const ToggleMobileMenu = () => setMobileMenu(!mobileMenu);
+  const ToggleMobileMenu = () => setMobileMenu(prev => !prev);
 
   return (
     <div className="content">

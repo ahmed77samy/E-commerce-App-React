@@ -7,8 +7,9 @@ import { Link } from 'react-router-dom';
 
 function Search() {
   const [open, setOpen] = useState(false);
-  const ToggleSearch = (e) => setOpen(!open);
+  const ToggleSearch = (e) => setOpen(prev => !prev);
 
+  // map for product_items to given the items
   const searchResultsList = product_items.map((item, index) => {
     return (
       <div className="product-item" key={index}>

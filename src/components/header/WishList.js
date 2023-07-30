@@ -8,8 +8,9 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 
 function WishList() {
   const [open, setOpen] = useState(false);
-  const ToggleWishList = (e) => setOpen(!open);
+  const ToggleWishList = (e) => setOpen(prev => !prev);
 
+  // map for product_items to given the items
   const WishListList = product_items.map((item, index) => {
     const { photo, title, price } = item;
     return (

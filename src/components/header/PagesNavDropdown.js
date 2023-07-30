@@ -8,12 +8,20 @@ export function PagesNavDropdown() {
   const ParentRef = useRef(null);
   const NodeRef = useRef(null);
   const [show, setShow] = useState(false);
+
   useEffect(() => {
-    let navDropdownMenu = ParentRef.current.children[1];
-    NodeRef.current = navDropdownMenu;
+    let subscribe = true;
+    if (subscribe) {
+      let navDropdownMenu = ParentRef.current.children[1];
+      NodeRef.current = navDropdownMenu;
+    }
+    return () => {
+      subscribe = false;
+    };
   }, []);
+
   const showDropdown = (e) => {
-    setShow(!show);
+    setShow(true);
   };
   const hideDropdown = (e) => {
     setShow(false);
@@ -34,13 +42,27 @@ export function PagesNavDropdown() {
     >
       <CSSTransition in={show} nodeRef={NodeRef} timeout={200} classNames="slideup" unmountOnExit>
         <div>
-          <NavDropdown.Item as={Link} to="/about">من نحن</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/customer-service">خدمة العملاء</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/faq">الاسئله الشائعه</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/contact">تواصل معنا</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/privacy-policy">سياسة الخصوصية</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/cookie-policy">سياسة ملفات الارتباط</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/404">خطا 404</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/about">
+            من نحن
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/customer-service">
+            خدمة العملاء
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/faq">
+            الاسئله الشائعه
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/contact">
+            تواصل معنا
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/privacy-policy">
+            سياسة الخصوصية
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/cookie-policy">
+            سياسة ملفات الارتباط
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/404">
+            خطا 404
+          </NavDropdown.Item>
         </div>
       </CSSTransition>
     </NavDropdown>
@@ -58,7 +80,7 @@ export function PagesNavDropdownMobile() {
   }, []);
 
   const showDropdown = () => {
-    setShow(!show);
+    setShow(prev => !prev);
   };
 
   return (
@@ -76,13 +98,27 @@ export function PagesNavDropdownMobile() {
     >
       <CSSTransition in={show} nodeRef={NodeRef} timeout={200} classNames="slideup" unmountOnExit>
         <div>
-          <NavDropdown.Item as={Link} to="/about">من نحن</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/customer-service">خدمة العملاء</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/faq">الاسئله الشائعه</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/contact">تواصل معنا</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/privacy-policy">سياسة الخصوصية</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/cookie-policy">سياسة ملفات الارتباط</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/404">خطا 404</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/about">
+            من نحن
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/customer-service">
+            خدمة العملاء
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/faq">
+            الاسئله الشائعه
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/contact">
+            تواصل معنا
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/privacy-policy">
+            سياسة الخصوصية
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/cookie-policy">
+            سياسة ملفات الارتباط
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/404">
+            خطا 404
+          </NavDropdown.Item>
         </div>
       </CSSTransition>
     </NavDropdown>

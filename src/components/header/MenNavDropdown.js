@@ -8,12 +8,20 @@ export function MenNavDropdown() {
   const ParentRef = useRef(null);
   const NodeRef = useRef(null);
   const [show, setShow] = useState(false);
+
   useEffect(() => {
-    let navDropdownMenu = ParentRef.current.children[1];
-    NodeRef.current = navDropdownMenu;
+    let subscribe = true;
+    if (subscribe) {
+      let navDropdownMenu = ParentRef.current.children[1];
+      NodeRef.current = navDropdownMenu;
+    }
+    return () => {
+      subscribe = false;
+    };
   }, []);
+
   const showDropdown = (e) => {
-    setShow(!show);
+    setShow(true);
   };
   const hideDropdown = (e) => {
     setShow(false);
@@ -47,39 +55,93 @@ export function MenNavDropdown() {
             </Col>
             <Col>
               <h5 className="dropdown-header">ملابس</h5>
-              <NavDropdown.Item as={Link} to="/shop">بناطيل</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">جواكيت</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">بليزرات</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">قمصان</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">سويت بانس</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">شروال</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">ترينجات</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">سويتشرت</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">سروال</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                بناطيل
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                جواكيت
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                بليزرات
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                قمصان
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                سويت بانس
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                شروال
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                ترينجات
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                سويتشرت
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                سروال
+              </NavDropdown.Item>
             </Col>
             <Col>
               <h5 className="dropdown-header">احذيه</h5>
-              <NavDropdown.Item as={Link} to="/shop">رياضي</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">جزم واحذيه جلد</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">كونفرس</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">اير ماكس</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">كلاسيك</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">صنادل</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">شباشب</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">احذيه برقبه</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">كلاسيك</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                رياضي
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                جزم واحذيه جلد
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                كونفرس
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                اير ماكس
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                كلاسيك
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                صنادل
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                شباشب
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                احذيه برقبه
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                كلاسيك
+              </NavDropdown.Item>
             </Col>
             <Col>
               <h5 className="dropdown-header">اكسسوارات</h5>
-              <NavDropdown.Item as={Link} to="/shop">فضه</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">حظاظات</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">اكياس</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">حقائب ظهر</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">نظارات</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">حافظات ايفون</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">الادوات</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">قباعات</NavDropdown.Item>
-              <NavDropdown.Item as={Link} to="/shop">المحافظ</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                فضه
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                حظاظات
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                اكياس
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                حقائب ظهر
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                نظارات
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                حافظات ايفون
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                الادوات
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                قباعات
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/shop">
+                المحافظ
+              </NavDropdown.Item>
             </Col>
 
             <Col className="collection-item">
@@ -109,7 +171,7 @@ export function MenNavDropdownMobile() {
   }, []);
 
   const showDropdown = () => {
-    setShow(!show);
+    setShow(prev => !prev);
   };
 
   return (
@@ -128,39 +190,97 @@ export function MenNavDropdownMobile() {
       <CSSTransition in={show} nodeRef={NodeRef} timeout={200} classNames="slideup" unmountOnExit>
         <div>
           <h5 className="dropdown-header">ملابس</h5>
-          <NavDropdown.Item as={Link} to="/shop">بناطيل</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">جواكيت</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">بليزرات</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">قمصان</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">سويت بانس</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">شروال</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">ترينجات</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">سويتشرت</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">سروال</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">تريكو</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            بناطيل
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            جواكيت
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            بليزرات
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            قمصان
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            سويت بانس
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            شروال
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            ترينجات
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            سويتشرت
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            سروال
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            تريكو
+          </NavDropdown.Item>
           <div className="spliter light my-2"></div>
           <h5 className="dropdown-header">احذيه</h5>
-          <NavDropdown.Item as={Link} to="/shop">رياضي</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">جزم واحذيه جلد</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">كونفرس</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">اير ماكس</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">كلاسيك</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">صنادل</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">شباشب</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">احذيه برقبه</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            رياضي
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            جزم واحذيه جلد
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            كونفرس
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            اير ماكس
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            كلاسيك
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            صنادل
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            شباشب
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            احذيه برقبه
+          </NavDropdown.Item>
           <div className="spliter light my-2"></div>
           <h5 className="dropdown-header">اكسسوارات</h5>
-          <NavDropdown.Item as={Link} to="/shop">فضه</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">حظاظات</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">اكياس</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">حقائب ظهر</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">نظارات</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">حافظات ايفون</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">الادوات</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">قباعات</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">المحافظ</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">احزمه</NavDropdown.Item>
-          <NavDropdown.Item as={Link} to="/shop">جوارب</NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            فضه
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            حظاظات
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            اكياس
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            حقائب ظهر
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            نظارات
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            حافظات ايفون
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            الادوات
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            قباعات
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            المحافظ
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            احزمه
+          </NavDropdown.Item>
+          <NavDropdown.Item as={Link} to="/shop">
+            جوارب
+          </NavDropdown.Item>
         </div>
       </CSSTransition>
     </NavDropdown>

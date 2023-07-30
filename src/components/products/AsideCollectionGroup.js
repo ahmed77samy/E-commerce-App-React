@@ -23,7 +23,7 @@ function AsideCollectionGroup() {
 
   return (
     <div className="aside-group">
-      <div className="aside-header d-flex justify-content-between align-items-center" onClick={() => setShowCollectionBody(!showCollectionBody)}>
+      <div className="aside-header d-flex justify-content-between align-items-center" onClick={() => setShowCollectionBody(prev => !prev)}>
         <h4 className="m-0">الاقسام</h4>
         {showCollectionBody ? <FiChevronUp /> : <FiChevronDown />}
       </div>

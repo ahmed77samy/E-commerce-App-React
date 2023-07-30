@@ -10,8 +10,9 @@ import { GrEdit } from 'react-icons/gr';
 
 function Cart() {
   const [open, setOpen] = useState(false);
-  const ToggleCart = (e) => setOpen(!open);
+  const ToggleCart = (e) => setOpen(prev => !prev);
 
+  // map for product_items to given the items
   const CartList = product_items.map((item, index) => {
     const { photo, title, price } = item;
     return (

@@ -5,7 +5,7 @@ import Footer from '../../components/footer/Footer.js';
 function SignUp() {
   return (
     <div className="page-wrapper">
-      <Header style={{ marginBottom: '50px' }} />
+      <Header />
       <SignUpForm />
       <Footer />
     </div>

@@ -12,6 +12,7 @@ function Sponsers() {
   let navigationPrevRef = useRef(0);
   let navigationNextRef = useRef(0);
 
+  // map for sponsers to given the items
   const itemList = sponsers.map((item, index) => {
     return (
       <SwiperSlide key={index}>

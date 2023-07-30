@@ -2,13 +2,12 @@ import apiURL from '../configration-api';
 import cache from '../cache';
 
 class USER {
-
   /**
    * check the user login session
    * @returns boolean
    */
   IsLogin() {
-    return cache.get("TOKEN") ? true : false
+    return cache.get('TOKEN') ? true : false;
   }
 
   /**
@@ -53,5 +52,5 @@ class USER {
     window.location.href = '/login';
   }
 }
-
-export default new USER();
+const newUSER = new USER();
+export default newUSER;

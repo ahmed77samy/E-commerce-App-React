@@ -4,7 +4,7 @@ function FooterCopyRight() {
   return (
     <div className="footer__copyright">
       <Container>
-        <div className='d-flex flex-wrap gap-30 justify-content-between'>
+        <div className="d-flex flex-wrap gap-30 justify-content-between">
           <p className="m-0">جميع الحقوق محوظه @2023 لدي شركتنا</p>
           <ul className="list-unstyled m-0 p-0">
             <li>

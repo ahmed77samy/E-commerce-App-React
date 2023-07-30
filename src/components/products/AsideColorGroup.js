@@ -18,7 +18,7 @@ function AsideColorGroup() {
 
   return (
     <div className="aside-group">
-      <div className="aside-header d-flex justify-content-between align-items-center" onClick={() => setShowColorBody(!showColorBody)}>
+      <div className="aside-header d-flex justify-content-between align-items-center" onClick={() => setShowColorBody(prev => !prev)}>
         <h4 className="m-0">الالوان</h4>
         {showColorBody ? <FiChevronUp /> : <FiChevronDown />}
       </div>

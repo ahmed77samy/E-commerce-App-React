@@ -14,12 +14,18 @@ export function AccountNavDropdown() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    let navDropdownMenu = ParentRef.current.children[1];
-    NodeRef.current = navDropdownMenu;
+    let subscribe = true;
+    if (subscribe) {
+      let navDropdownMenu = ParentRef.current.children[1];
+      NodeRef.current = navDropdownMenu;
+    }
+    return () => {
+      subscribe = false;
+    };
   }, []);
 
   const showDropdown = (e) => {
-    setShow(!show);
+    setShow(true);
   };
 
   const hideDropdown = (e) => {

@@ -14,6 +14,7 @@ import CookiePolicy from "../views/pages/CookiePolicy"
 import Compare from "../views/user/Compare"
 import WishList from "../views/user/WishList"
 import Cart from "../views/user/Cart"
+import NotFound from "../views/pages/NotFound"
 
 function AllRoutes() {
   return (
@@ -41,6 +42,8 @@ function AllRoutes() {
         <Route path="/cart" element={<Cart />} />
 
 
+        <Route path="/404" element={<NotFound />} />
+        <Route path='*' element={<NotFound />}/>
 
       </Routes>
     </>

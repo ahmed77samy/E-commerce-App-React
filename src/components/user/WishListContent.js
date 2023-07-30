@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 
 function WishList() {
+
+  // map for items to given the items
   const wishListList = wishlist_items.map((item, index) => {
     const { photo, title, price } = item;
     return (

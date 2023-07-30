@@ -5,6 +5,8 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 import { BsBagCheck } from 'react-icons/bs';
 
 function CartContent() {
+
+  // map for items to given the items
   const CartList = cart_items.map((item, index) => {
     return <CartItem data={item} key={index} />;
   });

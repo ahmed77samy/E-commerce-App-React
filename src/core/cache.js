@@ -1,4 +1,4 @@
-class cache {
+class CACHE {
   /**
    * set item cache in localStorage
    * @param {String} key
@@ -22,5 +22,5 @@ class cache {
     return localStorage.removeItem(key);
   }
 }
-
-export default new cache();
+const newCACHE = new CACHE();
+export default newCACHE;
