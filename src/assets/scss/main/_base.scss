@@ -107,7 +107,7 @@ p {
 textarea {
   resize: none;
 }
-.no-transition{
+.no-transition {
   transition: none;
 }
 .italic {
@@ -124,6 +124,10 @@ textarea {
 }
 .main-padding-bottom {
   padding-bottom: $px-mainPadding;
+}
+.spinner-border {
+  width: 13px;
+  height: 13px;
 }
 .spliter {
   border-top: 1px solid $px-light;
@@ -579,7 +583,6 @@ textarea {
   display: block;
   pointer-events: all;
 }
-
 .slideup-exit {
   opacity: 1;
   display: block;
@@ -591,6 +594,66 @@ textarea {
   pointer-events: none;
 }
 .slideup-exit-done {
+  display: none;
+  pointer-events: all;
+}
+
+.slideleft-enter {
+  opacity: 0;
+  transform: translateX(-20px);
+  display: block;
+}
+.slideleft-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s;
+  pointer-events: none;
+}
+.slideleft-enter-done {
+  display: block;
+  pointer-events: all;
+}
+.slideleft-exit {
+  opacity: 1;
+  display: block;
+}
+.slideleft-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.4s;
+  pointer-events: none;
+}
+.slideleft-exit-done {
+  display: none;
+  pointer-events: all;
+}
+
+.slideright-enter {
+  opacity: 0;
+  transform: translateX(20px);
+  display: block;
+}
+.slideright-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.4s;
+  pointer-events: none;
+}
+.slideright-enter-done {
+  display: block;
+  pointer-events: all;
+}
+.slideright-exit {
+  opacity: 1;
+  display: block;
+}
+.slideright-exit-active {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.4s;
+  pointer-events: none;
+}
+.slideright-exit-done {
   display: none;
   pointer-events: all;
 }

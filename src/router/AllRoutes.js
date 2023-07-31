@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import SignUp from '../views/authentication/SignUp.js';
 import Login from '../views/authentication/Login.js';
+import ForgetPassword from '../views/authentication/ForgetPassword.js';
 import Home from '../views/Home.js';
 import Products from '../views/shop/Products.js';
 import ProductsSingle from '../views/shop/ProductsSingle.js';
@@ -21,6 +22,7 @@ function AllRoutes() {
     <>
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/forget-password" element={<ForgetPassword />} />
         <Route path="/signup" element={<SignUp />} />
 
 

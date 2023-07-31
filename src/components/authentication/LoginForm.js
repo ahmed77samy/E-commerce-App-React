@@ -3,8 +3,8 @@ import { useFormik } from 'formik';
 import { Container, Form } from 'react-bootstrap';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { BsGoogle } from 'react-icons/bs';
+import BorderLodaing from '../BorderLodaing';
 
 function LoginForm() {
   // function formik submiting
@@ -37,7 +37,6 @@ function LoginForm() {
                 isValid={formik.touched.email && !formik.errors.email}
                 isInvalid={formik.touched.email && formik.errors.email}
               />
-              <Form.Text className="text-muted">لن نشارك بريدك الإلكتروني مع أي شخص آخر.</Form.Text>
               <Form.Control.Feedback className="text-capitalize" type={formik.touched.email && (formik.errors.email ? 'invalid' : 'valid')}>
                 {formik.touched.email && (formik.errors.email ? `${formik.errors.email}` : 'يبدو جيدا')}
               </Form.Control.Feedback>
@@ -59,12 +58,22 @@ function LoginForm() {
             </Form.Group>
             <Form.Group className="form-group d-flex align-items-center justify-content-center mt-3">
               <button className="btn__classic mt-2 w-100" type="submit" disabled={formik.isSubmitting || !formik.isValid}>
-                تسجيل الدخول
+                {formik.isSubmitting === true ? <BorderLodaing /> : 'تسجيل الدخول'}
               </button>
+              <button className="btn__classic mt-2 mr-2" type='button' disabled={formik.isSubmitting} data-title-top="الدخول بواسطه جوجل">
+                <BsGoogle />
+              </button>
+            </Form.Group>
+            <Form.Group>
+              {formik.errors.error && (
+                <Form.Control.Feedback className="text-capitalize m-0 d-block" type="invalid">
+                  {formik.errors.error}
+                </Form.Control.Feedback>
+              )}
             </Form.Group>
             <Form.Group className="form-group d-flex align-items-center justify-content-center mt-3">
               <p className="m-0">
-                <a className="link c-black weight-600">هل نسيت كلمة المرور ؟</a>
+                <Link to="/forget-password" className="link c-black weight-600">هل نسيت كلمة المرور ؟</Link>
               </p>
             </Form.Group>
             <Form.Group className="form-group d-flex align-items-center justify-content-center mt-3">
@@ -74,28 +83,6 @@ function LoginForm() {
                   سجل الان
                 </Link>
               </p>
-            </Form.Group>
-            <Form.Group className="form-group d-flex align-items-center justify-content-center mb-0 mt-4">
-              <div className="sign-with">
-                <div className="spliter light-2 mt-3 mb-4"></div>
-                <ul className="social-media justify-content-center">
-                  <li>
-                    <a href="/">
-                      <FaTwitter className="icon" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/">
-                      <BsGoogle className="icon" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/">
-                      <FaFacebookF className="icon" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
             </Form.Group>
           </Form>
         </Container>

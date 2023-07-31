@@ -3,8 +3,8 @@ import { useFormik } from 'formik';
 import { Container, Form } from 'react-bootstrap';
 import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { BsGoogle } from 'react-icons/bs';
+import BorderLodaing from "../BorderLodaing"
 
 function SignUpForm() {
   // function formik submiting
@@ -14,7 +14,7 @@ function SignUpForm() {
     name: Yup.string().required('هذا الحقل مطلوب'),
     email: Yup.string().required('هذا الحقل مطلوب').email('بريد الكتروني غير صحيح'),
     password: Yup.string().required('هذا الحقل مطلوب').min(8, 'كلمه المرور صغيره جدا!').max(50, 'كلمه المرور طويله جدا!'),
-    password_confirmation: Yup.string()
+    repassword: Yup.string()
       .required('هذا الحقل مطلوب')
       .test('passwords-match', 'يجب أن تتطابق كلمات المرور', function (value) {
         return this.parent.password === value;
@@ -22,7 +22,7 @@ function SignUpForm() {
   };
   // Formik configration
   const formik = useFormik({
-    initialValues: { name: '', email: '', password: '', password_confirmation: '' },
+    initialValues: { name: '', email: '', password: '', repassword: '' },
     onSubmit: Submiting,
     validationSchema: Yup.object(YupSchema),
   });
@@ -79,24 +79,27 @@ function SignUpForm() {
                 {formik.touched.password && (formik.errors.password ? `${formik.errors.password}` : 'يبدو جيدا')}
               </Form.Control.Feedback>
             </Form.Group>
-            <Form.Group controlId="password_confirmation" className="form-group">
+            <Form.Group controlId="repassword" className="form-group">
               <Form.Control
                 className="input__classic"
                 type="password"
                 placeholder="تأكيد كلمة المرور"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
-                value={formik.values.password_confirmation}
-                isValid={formik.touched.password_confirmation && !formik.errors.password_confirmation}
-                isInvalid={formik.touched.password_confirmation && formik.errors.password_confirmation}
+                value={formik.values.repassword}
+                isValid={formik.touched.repassword && !formik.errors.repassword}
+                isInvalid={formik.touched.repassword && formik.errors.repassword}
               />
-              <Form.Control.Feedback className="text-capitalize" type={formik.touched.password_confirmation && (formik.errors.password_confirmation ? 'invalid' : 'valid')}>
-                {formik.touched.password_confirmation && (formik.errors.password_confirmation ? `${formik.errors.password_confirmation}` : 'يبدو جيدا')}
+              <Form.Control.Feedback className="text-capitalize" type={formik.touched.repassword && (formik.errors.repassword ? 'invalid' : 'valid')}>
+                {formik.touched.repassword && (formik.errors.repassword ? `${formik.errors.repassword}` : 'يبدو جيدا')}
               </Form.Control.Feedback>
             </Form.Group>
             <Form.Group className="form-group d-flex align-items-center justify-content-center mt-3">
               <button className="btn__classic mt-2 w-100" type="submit" disabled={formik.isSubmitting || !formik.isValid}>
-                إنشاء حساب جديد
+                {formik.isSubmitting === true ? <BorderLodaing /> : 'إنشاء حساب جديد'}
+              </button>
+              <button className="btn__classic mt-2 mr-2" type='button' disabled={formik.isSubmitting} data-title-top="التسجيل بواسطه جوجل">
+                <BsGoogle />
               </button>
             </Form.Group>
             <Form.Group className="form-group d-flex align-items-center justify-content-center mt-3">
@@ -106,28 +109,6 @@ function SignUpForm() {
                   سجل الان
                 </Link>
               </p>
-            </Form.Group>
-            <Form.Group className="form-group d-flex align-items-center justify-content-center mb-0 mt-4">
-              <div className="sign-with">
-                <div className="spliter light-2 mt-3 mb-4"></div>
-                <ul className="social-media justify-content-center">
-                  <li>
-                    <a href="/">
-                      <FaTwitter className="icon" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/">
-                      <BsGoogle className="icon" />
-                    </a>
-                  </li>
-                  <li>
-                    <a href="/">
-                      <FaFacebookF className="icon" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
             </Form.Group>
           </Form>
         </Container>
