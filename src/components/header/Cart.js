@@ -18,12 +18,12 @@ function Cart() {
     return (
       <div className="product-item" key={index}>
         <div>
-          <a data-title-left="تعديل" className='ml-2'>
+          <span data-title-left="تعديل" className='ml-2' role='button'>
             <GrEdit className="icon" />
-          </a>
-          <a data-title-left="حذف">
+          </span>
+          <span role='button' data-title-left="حذف">
             <RiDeleteBin6Line className="icon" />
-          </a>
+          </span>
         </div>
         <Link to="/shop/products/id">
           <img src={photo} width={80} alt="product" />
@@ -42,9 +42,9 @@ function Cart() {
 
   return (
     <li data-title-down="السله">
-      <a onClick={ToggleCart}>
+      <span onClick={ToggleCart} role='button'>
         <BiShoppingBag className="icon" />
-      </a>
+      </span>
       <Modal show={open} onHide={ToggleCart} className="navbar-modal navbar-cart" animation={true}>
         <Modal.Header>
           <Modal.Title>

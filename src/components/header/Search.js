@@ -26,9 +26,9 @@ function Search() {
 
   return (
     <li data-title-down="بحث">
-      <a onClick={ToggleSearch}>
+      <span role='button' onClick={ToggleSearch}>
         <GoSearch className="icon" />
-      </a>
+      </span>
       <Modal show={open} onHide={ToggleSearch} className="navbar-modal navbar-search" animation={true}>
         <Modal.Header>
           <Modal.Title>

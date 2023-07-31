@@ -25,7 +25,7 @@ const Specifications = {
 function ProductDescription() {
   const [modal, setModal] = useState(false);
   const toggleModal = () => setModal(prev => !prev);
-  const [player, setPlayer] = useState({
+  const [player] = useState({
     url: 'https://www.youtube.com/watch?v=xE7vQoN-rXY',
     muted: false,
     playing: true,

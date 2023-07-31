@@ -12,9 +12,9 @@ function ComareContent() {
     return (
       <div className="sizer col" key={index}>
         <div>
-          <a data-title-left="حذف">
+          <span data-title-left="حذف" role='button'>
             <RiDeleteBin6Line className="icon" />
-          </a>
+          </span>
         </div>
         <img src={photo} className="my-3" alt="product" />
         <div>

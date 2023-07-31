@@ -16,9 +16,9 @@ function WishList() {
     return (
       <div className="product-item" key={index}>
         <div>
-          <a data-title-left="حذف">
+          <span role='button' data-title-left="حذف">
             <RiDeleteBin6Line className="icon" />
-          </a>
+          </span>
         </div>
         <Link to="/shop/products/id">
           <img src={photo} width={80} alt="product" />
@@ -35,9 +35,9 @@ function WishList() {
 
   return (
     <li data-title-down="المفضله">
-      <a onClick={ToggleWishList}>
+      <span role='button' onClick={ToggleWishList}>
         <AiOutlineHeart className="icon" />
-      </a>
+      </span>
       <Modal show={open} onHide={ToggleWishList} className="navbar-modal navbar-wish-list" animation={true}>
         <Modal.Header>
           <Modal.Title>

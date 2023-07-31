@@ -12,9 +12,9 @@ function WishList() {
       <Col key={index}>
         <div className="product-item">
           <div>
-            <a data-title-left="حذف">
+            <span role='button' data-title-left="حذف">
               <RiDeleteBin6Line className="icon" />
-            </a>
+            </span>
           </div>
           <img src={photo} className="img-fluid my-3" alt="product" />
           <h6>

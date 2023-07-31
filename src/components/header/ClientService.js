@@ -14,9 +14,9 @@ function ClientService() {
 
   return (
     <li data-title-down="خدمه الزباين">
-      <a onClick={ToggleClientService}>
+      <span role='button' onClick={ToggleClientService}>
         <BsQuestionCircle className="icon" />
-      </a>
+      </span>
       <Modal show={open} onHide={ToggleClientService} className="navbar-modal navbar-client-service" animation={true}>
         <Modal.Header>
           <Modal.Title>

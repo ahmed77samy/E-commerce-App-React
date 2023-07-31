@@ -38,12 +38,12 @@ function CartItem(props) {
           </span>
         </div>
         <div className="actions">
-          <a data-title-top="تعديل">
+          <span role='button' data-title-top="تعديل">
             <GrEdit className="icon" />
-          </a>
-          <a data-title-top="حذف" className='mr-3'>
+          </span>
+          <span role='button' data-title-top="حذف" className='mr-3'>
             <RiDeleteBin6Line className="icon" />
-          </a>
+          </span>
         </div>
       </div>
       <div className="spliter light-2 my-3"></div>
