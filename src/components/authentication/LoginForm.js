@@ -5,10 +5,13 @@ import * as Yup from 'yup';
 import { Link } from 'react-router-dom';
 import { BsGoogle } from 'react-icons/bs';
 import BorderLodaing from '../BorderLodaing';
+import { useState } from 'react';
 
 function LoginForm() {
+  const [errDB, setErrDB] = useState(null);
+
   // function formik submiting
-  const Submiting = (values) => USER.LoginConfig(values, formik);
+  const Submiting = (values) => USER.LoginConfig(values, formik, setErrDB);
   // Yup Schema shape
   const YupSchema = {
     email: Yup.string().required('هذا الحقل مطلوب').email('بريد الكتروني غير صحيح'),
@@ -26,6 +29,11 @@ function LoginForm() {
         <Container>
           <h3 className="text-center mb-5">تسجيل الدخول</h3>
           <Form noValidate onSubmit={formik.handleSubmit}>
+            {errDB && (
+              <Form.Control.Feedback className="text-capitalize mb-2 d-block" type="invalid">
+                {errDB}
+              </Form.Control.Feedback>
+            )}
             <Form.Group controlId="email" className="form-group">
               <Form.Control
                 className="input__classic"
@@ -60,20 +68,15 @@ function LoginForm() {
               <button className="btn__classic mt-2 w-100" type="submit" disabled={formik.isSubmitting || !formik.isValid}>
                 {formik.isSubmitting === true ? <BorderLodaing /> : 'تسجيل الدخول'}
               </button>
-              <button className="btn__classic mt-2 mr-2" type='button' disabled={formik.isSubmitting} data-title-top="الدخول بواسطه جوجل">
+              <button className="btn__classic mt-2 mr-2" type="button" disabled={formik.isSubmitting} data-title-top="الدخول بواسطه جوجل">
                 <BsGoogle />
               </button>
             </Form.Group>
-            <Form.Group>
-              {formik.errors.error && (
-                <Form.Control.Feedback className="text-capitalize m-0 d-block" type="invalid">
-                  {formik.errors.error}
-                </Form.Control.Feedback>
-              )}
-            </Form.Group>
             <Form.Group className="form-group d-flex align-items-center justify-content-center mt-3">
               <p className="m-0">
-                <Link to="/forget-password" className="link c-black weight-600">هل نسيت كلمة المرور ؟</Link>
+                <Link to="/forget-password" className="link c-black weight-600">
+                  هل نسيت كلمة المرور ؟
+                </Link>
               </p>
             </Form.Group>
             <Form.Group className="form-group d-flex align-items-center justify-content-center mt-3">

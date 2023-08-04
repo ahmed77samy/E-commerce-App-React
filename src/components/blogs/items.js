@@ -36,3 +36,5 @@ export const blog_items = [
     publisher: 'محمد إبراهيم',
   },
 ];
+
+export const best_blog_items = blog_items.slice(0,3)

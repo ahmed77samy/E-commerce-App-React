@@ -123,5 +123,8 @@ export const colors_items = [
   { code: '#FFC0CB', name: 'روز' },
 ];
 
+export const last_product_items = product_items.slice(0,3)
+
+
 export const num_sizes_items = ["37","38","39","40","41","42","43","44"];
 export const x_sizes_items = ["2XS","XS","S","M","L","XL","2XL","3XL"];

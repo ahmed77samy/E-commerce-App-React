@@ -1,4 +1,5 @@
-.blogs {
+.blogs,
+.blogs-content {
   position: relative;
   padding: 0 30px;
   .blog-item {
@@ -13,8 +14,48 @@
     }
     .blog__item-content {
       flex-basis: 40%;
+      p {
+        margin: 0;
+      }
       @include down-md {
         flex-basis: 100%;
+      }
+    }
+  }
+}
+
+.aside__blog {
+  .aside-header {
+    margin-bottom: 25px;
+  }
+  .aside-body {
+    .product-item,.blog-item {
+      display: flex;
+      gap: 20px;
+      img {
+        flex-shrink: 0;
+      }
+    }
+    &.tags {
+      ul {
+        column-gap: 5px;
+        li {
+          background-color: $px-dark;
+          font-size: 15px;
+          line-height: 18px;
+          transition: 0.2s;
+          &:hover {
+            background-color: $px-light-2;
+            a {
+              color: $px-dark !important;
+            }
+          }
+          a {
+            display: block;
+            color: $px-white !important;
+            margin: 5px 10px;
+          }
+        }
       }
     }
   }

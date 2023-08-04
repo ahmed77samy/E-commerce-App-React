@@ -6,6 +6,7 @@ import Home from '../views/Home.js';
 import Products from '../views/shop/Products.js';
 import ProductsSingle from '../views/shop/ProductsSingle.js';
 import About from "../views/pages/About"
+import Blogs from "../views/pages/Blogs.js"
 import CustomerService from "../views/pages/CustomerService"
 import ClientService from "../views/pages/ClientService"
 import Faq from "../views/pages/Faq"
@@ -32,6 +33,7 @@ function AllRoutes() {
 
 
         <Route path="/about" element={<About />} />
+        <Route path="/blogs" element={<Blogs />} />
         <Route path="/customer-service" element={<CustomerService />} />
         <Route path="/client-service" element={<ClientService />} />
         <Route path="/faq" element={<Faq />} />
