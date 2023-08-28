@@ -5,6 +5,7 @@ import { FaBehance, FaFacebookF, FaTwitter } from 'react-icons/fa';
 import { BsInstagram } from 'react-icons/bs';
 import ProductForm from "./ProductForm"
 import {Link} from "react-router-dom"
+import image from "../../assets/image/payment.png"
 
 function ProductView({ data, id }) {
   return (
@@ -29,7 +30,7 @@ function ProductView({ data, id }) {
             </div>
             <p className='m-0'>{data.description}</p>
             <ProductForm data={data} />
-            <img src="/img/payment.png" alt="sponser" className="my-3 img-fluid" />
+            <img src={image} alt="sponser" className="my-3 img-fluid" />
             <ul className="social-media dark">
               <li><Link href="/" data-title-top="تويتر"><FaTwitter className="icon"/></Link></li>
               <li><Link href="/" data-title-top="انستجرام"><BsInstagram className="icon"/></Link></li>

@@ -1,6 +1,15 @@
+import productPhoto1 from "../../assets/image/products/1.jpg"
+import productPhoto2 from "../../assets/image/products/2.jpg"
+import productPhoto3 from "../../assets/image/products/3.jpg"
+import productPhoto4 from "../../assets/image/products/4.jpg"
+import productPhoto5 from "../../assets/image/products/5.jpg"
+import productPhoto6 from "../../assets/image/products/6.jpg"
+import productPhoto7 from "../../assets/image/products/7.jpg"
+import productPhoto8 from "../../assets/image/products/8.jpg"
+
 export const product_items = [
   {
-    photo: '/img/products/1.jpg',
+    photo: productPhoto1,
     title: 'تيشرت تشينو بولو مميز',
     price: { sale: '200', money: '170' },
     sizes: ['xs', 's', 'm', 'l', 'xl'],
@@ -13,7 +22,7 @@ export const product_items = [
     description: "لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر."
   },
   {
-    photo: '/img/products/2.jpg',
+    photo: productPhoto2,
     title: 'بنطلون ليكرا خامه ممتازه قطن',
     price: { money: '230' },
     sizes: ['38', '39', '40', '41', '42'],
@@ -25,7 +34,7 @@ export const product_items = [
     description: "لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر."
   },
   {
-    photo: '/img/products/3.jpg',
+    photo: productPhoto3,
     title: 'تيشرت تشينو بولو مميز',
     price: { money: '170' },
     sizes: ['s', 'm', 'l'],
@@ -37,7 +46,7 @@ export const product_items = [
     description: "لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر."
   },
   {
-    photo: '/img/products/4.jpg',
+    photo: productPhoto4,
     title: 'بنطلون ليكرا خامه ممتازه قطن',
     price: { sale: '230', money: '200' },
     sizes: ['38', '39', '40', '41', '42', '43'],
@@ -51,7 +60,7 @@ export const product_items = [
     description: "لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر."
   },
   {
-    photo: '/img/products/5.jpg',
+    photo: productPhoto5,
     title: 'بنطلون ليكرا خامه ممتازه قطن',
     price: { money: '230' },
     sizes: ['38', '39', '40', '41', '42'],
@@ -63,7 +72,7 @@ export const product_items = [
     description: "لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر."
   },
   {
-    photo: '/img/products/6.jpg',
+    photo: productPhoto6,
     title: 'بنطلون ليكرا خامه ممتازه قطن',
     price: { sale: '230', money: '200' },
     sizes: ['38', '39', '40', '41', '42', '43'],
@@ -77,7 +86,7 @@ export const product_items = [
     description: "لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر."
   },
   {
-    photo: '/img/products/7.jpg',
+    photo: productPhoto7,
     title: 'تيشرت تشينو بولو مميز',
     price: { sale: '200', money: '170' },
     sizes: ['xs', 's', 'm', 'l', 'xl'],
@@ -90,7 +99,7 @@ export const product_items = [
     description: "لوريم إيبسوم(Lorem Ipsum) هو ببساطة نص شكلي (بمعنى أن الغاية هي الشكل وليس المحتوى) ويُستخدم في صناعات المطابع ودور النشر."
   },
   {
-    photo: '/img/products/8.jpg',
+    photo: productPhoto8,
     title: 'تيشرت تشينو بولو مميز',
     price: { money: '170' },
     sizes: ['s', 'm', 'l'],

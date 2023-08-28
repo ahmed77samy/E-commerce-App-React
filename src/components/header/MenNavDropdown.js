@@ -3,6 +3,8 @@ import { Col, Container, NavDropdown, Row } from 'react-bootstrap';
 import { BiChevronDown } from 'react-icons/bi';
 import { Link } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
+import image1 from "../../assets/image/collections/18.jpg"
+import image2 from "../../assets/image/collections/19.jpg"
 
 export function MenNavDropdown() {
   const ParentRef = useRef(null);
@@ -46,7 +48,7 @@ export function MenNavDropdown() {
           <Row xs={1} md={5}>
             <Col className="collection-item">
               <Link to="/shop">
-                <img src="/img/collections/18.jpg" className="img-fluid" alt="collection" />
+                <img src={image1} className="img-fluid" alt="collection" />
                 <div>
                   <h6 className="m-0 weight-400">الجديد في</h6>
                   <span className="c-gray">مجموعه ربيع / صيف 2023</span>
@@ -146,7 +148,7 @@ export function MenNavDropdown() {
 
             <Col className="collection-item">
               <Link to="/shop">
-                <img src="/img/collections/19.jpg" className="img-fluid" alt="collection" />
+                <img src={image2} className="img-fluid" alt="collection" />
                 <div>
                   <h6 className="m-0 weight-400">التخفيضات والعروض الخاصه</h6>
                   <span className="c-gray">احصل علي خصم يصل الي 20%</span>
